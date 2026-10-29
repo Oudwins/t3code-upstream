@@ -151,7 +151,7 @@ describe("with a Base UI menu", () => {
           <MenuItem>Third</MenuItem>
         </MenuPopup>
       </Menu>,
-      { router: false },
+      { router: false }, // bare Base UI widgets; no routes involved
     );
     const items = () => [...document.querySelectorAll<HTMLElement>('[role="menuitem"]')];
     expect(items()).toHaveLength(3);
@@ -192,7 +192,7 @@ describe("with a Base UI command list", () => {
           </CommandList>
         </Command>
       </div>,
-      { router: false },
+      { router: false }, // bare Base UI widgets; no routes involved
     );
     const input = document.querySelector<HTMLInputElement>("input")!;
     const highlighted = () =>
