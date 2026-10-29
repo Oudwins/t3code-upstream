@@ -836,6 +836,7 @@ export const ModelPickerContent = memo(function ModelPickerContent(props: {
               }
         }
         data-model-picker-content="true"
+        data-list-navigation=""
       >
         {showSidebar && (
           <ModelPickerSidebar

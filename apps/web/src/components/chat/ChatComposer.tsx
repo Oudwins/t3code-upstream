@@ -3088,6 +3088,10 @@ export const ChatComposer = memo(function ChatComposer(props: ChatComposerProps)
   return (
     <form
       ref={composerFormRef}
+      // Focus stays in the editor while its suggestion or stash menu is open.
+      data-list-navigation={
+        composerMenuOpen || (isStashMenuOpen && stashQueue.length > 0) ? "" : undefined
+      }
       onSubmit={submitComposerStable}
       onFocusCapture={(event) => {
         const activeElement = event.target;
